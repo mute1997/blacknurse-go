@@ -12,8 +12,8 @@ import (
 func generate_packet() []byte{
     packet_object := icmp.Message{
         Type: ipv4.ICMPTypeDestinationUnreachable,
-        Code: 0,
-        Checksum: len([]byte("black_nurse")),
+        Code: 3,
+        Checksum: 0,
         Body: &icmp.DefaultMessageBody{Data: []byte("black_nurse")},
     }
 
